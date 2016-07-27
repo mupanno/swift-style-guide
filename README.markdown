@@ -1,10 +1,9 @@
-# The Official raywenderlich.com Swift Style Guide.
+# The Official MU-Panno Swift Style Guide.
+(Based off of raywenderlich's swift-style-guide)
 
 This style guide is different from others you may see, because the focus is centered on readability for print and the web. We created this style guide to keep the code in our books, tutorials, and starter kits nice and consistent — even though we have many different authors working on the books.
 
 Our overarching goals are conciseness, readability, and simplicity.
-
-Writing Objective-C? Check out our [Objective-C Style Guide](https://github.com/raywenderlich/objective-c-style-guide) too.
 
 ## Table of Contents
 
@@ -154,12 +153,20 @@ This is the same as the `#selector` syntax. When in doubt, look at how Xcode lis
 
 ### Class Prefixes
 
-Swift types are automatically namespaced by the module that contains them and you should not add a class prefix such as RW. If two names from different modules collide you can disambiguate by prefixing the type name with the module name. However, only specify the module name when there is possibility for confusion which should be rare.
+Swift types are automatically namespaced by the module that contains them and you should not add a class prefix such as "PN". If two names from different modules collide you can disambiguate by prefixing the type name with the module name. However, only specify the module name when there is possibility for confusion which should be rare.
+
+If module system is not being used, all custom class names need to be prefixed with "PN", which indicates this custom class being a part of Panno project. 
 
 ```swift
 import SomeModule
 
 let myClass = MyModule.UsefulClass()
+```
+
+```swift
+class PNQuizTableViewController: UITableViewController {
+  // class stuff here
+}
 ```
 
 ### Selectors
@@ -939,44 +946,18 @@ if (name == "Hello") {
 
 ## Copyright Statement
 
-The following copyright statement should be included at the top of every source
+The copyright statement based on following sample should be included at the top of every source
 file:
 
-    /**
-     * Copyright (c) 2016 Razeware LLC
-     *
-     * Permission is hereby granted, free of charge, to any person obtaining a copy
-     * of this software and associated documentation files (the "Software"), to deal
-     * in the Software without restriction, including without limitation the rights
-     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-     * copies of the Software, and to permit persons to whom the Software is
-     * furnished to do so, subject to the following conditions:
-     *
-     * The above copyright notice and this permission notice shall be included in
-     * all copies or substantial portions of the Software.
-     *
-     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-     * THE SOFTWARE.
-     */
+    //
+    //  PNQuizQuestionDetailViewController.swift
+    //  Panno
+    //
+    //  Created by Ming Wu on 6/3/16.
+    //  Copyright © 2016 University of Missouri. All rights reserved.
+    //
 
-## Smiley Face
-
-Smiley faces are a very prominent style feature of the raywenderlich.com site! It is very important to have the correct smile signifying the immense amount of happiness and excitement for the coding topic. The closing square bracket `]` is used because it represents the largest smile able to be captured using ASCII art. A closing parenthesis `)` creates a half-hearted smile, and thus is not preferred.
-
-**Preferred:**
-```
-:]
-```
-
-**Not Preferred:**
-```
-:)
-```  
+The class name, developer name, creation date, and year of copyright need to be modified as per your case.
 
 ## Credits
 
